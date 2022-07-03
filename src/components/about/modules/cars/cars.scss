@@ -1,0 +1,76 @@
+@import '../../../../assets/scss/const.scss';
+.cars {
+    position: relative;
+    width: 100%;
+    padding-top: 180px;
+    padding-bottom: 50px;
+    background: #F2F2F2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &::after {
+        content: '';
+        width: 616px;
+        height: 610px;
+        position: absolute;
+        top: -100px;
+        margin-right: 220px;
+        background: url(../../../../assets/img/bg4.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 1;
+    }
+    .content {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        .text {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .title {
+                width: 40%;
+                font-size: 30px;
+                color: $textHover;
+                font-weight: 700;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                span {
+                    font-weight: 400;
+                    margin-top: 20px;
+                    font-size: 18px;
+                    color: $textColor;
+                }
+            }
+            .description {
+                position: relative;
+                width: 30%;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -24px;
+                    width: 4px;
+                    height: 100%;
+                    background: #ffb320;
+                }
+            }
+        }
+        .slider {
+            margin-top: 40px;
+            width: 100%;
+            z-index: 99;
+            img {
+                pointer-events: none;
+            }
+            .rec {
+                .rec-dot_active {
+                    background: $textHover;
+                    box-shadow: 0 0 1px 3px $textHover;
+                }
+            }
+        }
+    }
+}

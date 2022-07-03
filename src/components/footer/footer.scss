@@ -1,0 +1,108 @@
+@import '../../assets/scss/const.scss';
+.footer {
+    width: 100%;
+    padding: 90px 0;
+    background: $textHover;
+    .content {
+        height: 106.562px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            height: 47.109px;
+            width: 303.984px;
+            background: url(../../assets/img/Logo-Footer.svg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 10px;
+        }
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 390px;
+            padding: 10px;
+            .social {
+                width: 100px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .item {
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    transition: all .2s;
+                    &.telegram {
+                        background: url(../../assets/img/telegram.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &.whatsapp {
+                        background: url(../../assets/img/whatsapp.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &:hover {
+                        transform: rotate(1080deg);
+                    }
+                }
+            }
+            .info {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                flex-direction: column;
+                .time {
+                    font-size: 14px;
+                    color: $textColor;
+                    .marker {
+                        color: #27AE60;
+                    }
+                }
+                .number {
+                    text-decoration: none;
+                    font-size: 26px;
+                    font-weight: 600;
+                    color: $textColor;
+                    -ms-user-select: all;
+                    -moz-user-select: all;
+                    -khtml-user-select: all;
+                    -webkit-user-select: all;
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
+                .email {
+                    text-decoration: none;
+                    color: $textColor;
+                    font-weight: 400;
+                    -ms-user-select: all;
+                    -moz-user-select: all;
+                    -khtml-user-select: all;
+                    -webkit-user-select: all;
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.info {
+    .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        span:last-child {
+            cursor: pointer;
+            &:hover {
+                color: $textHover;
+            }
+        }
+    }
+}

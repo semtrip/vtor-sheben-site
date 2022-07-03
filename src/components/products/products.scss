@@ -1,0 +1,101 @@
+@import '../../assets/scss/const.scss';
+.products {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #ffffff 0%, #FFB320 100%);
+    width: 100%;
+    padding-bottom: 48px;
+    .title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        h2 {
+            position: relative;
+            font-size: 30px;
+            font-weight: 900;
+            color: $textColor;
+            display: flex;
+            align-items: center;
+            &::after {
+                position: absolute;
+                right: -100px;
+                content: '';
+                width: 33px;
+                height: 36px;
+                background: url(../../assets/img/title-geometry.svg) no-repeat;
+                background-position: center;
+            }
+        }
+        span {
+            text-align: right;
+            color: $textColor;
+            font-size: 18px;
+            i {
+                color: #FCA600;
+            }
+        }
+    }
+    .info {
+        font-size: 16px;
+        font-weight: 600;
+        color: $textColor;
+    }
+    .content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        .cart {
+            width: 32%;
+            background: #FCFCFC;
+            padding: 40px;
+            margin: 8px 0;
+            border: 2px solid #E5E5E5;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            img {
+                margin-bottom: 20px;
+                transition: all .5s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            .title {
+                font-weight: 700;
+                font-size: 28px;
+                color: $textColor;
+            }
+            .descriptor {
+                font-size: 28px;
+                color: $textColor;
+                margin-bottom: 20px;
+            }
+            .price {
+                font-weight: 700;
+                font-size: 24px;
+                color: $textColor;
+                margin-bottom: 20px;
+            }
+            .btn {
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: none;
+                color: #333333;
+                background-color: transparent;
+                background-image: linear-gradient(180deg, #FFB320 0%, #FCA600 100%);
+                border-radius: 10px;
+                padding: 18px 32px;
+                cursor: pointer;
+                transition: all .5s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

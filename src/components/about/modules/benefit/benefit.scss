@@ -1,0 +1,120 @@
+@import '../../../../assets/scss/const.scss';
+.benefit {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url(../../../../assets/img/bg2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 90px 0;
+    &::before {
+        content: '';
+        width: 300px;
+        height: 294px;
+        position: absolute;
+        top: -40px;
+        left: -150px;
+        background: url(../../../../assets/img/sheben1.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        .text {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .title {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                font-size: 34px;
+                font-weight: 600;
+                color: $textHover;
+                span {
+                    margin-top: 20px;
+                    color: #FFFFFF;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+            .description {
+                position: relative;
+                width: 45%;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -24px;
+                    width: 4px;
+                    height: 100%;
+                    background: $textHover;
+                }
+            }
+        }
+        .items {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .item {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-top: 100px;
+                padding: 0 40px;
+                .ico {
+                    width: 80px;
+                    height: 80px;
+                    margin-bottom: 20px;
+                    &.distribution {
+                        background: url(../../../../assets/img/distribution.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &.support {
+                        background: url(../../../../assets/img/support.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &.handshake {
+                        background: url(../../../../assets/img/handshake.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &.accounting {
+                        background: url(../../../../assets/img/accounting.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &.certificate {
+                        background: url(../../../../assets/img/certificate.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &.id-card {
+                        background: url(../../../../assets/img/id-card.svg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                span {
+                    color: #FFFFFF;
+                    font-size: 18px;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

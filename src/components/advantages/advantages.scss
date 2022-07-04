@@ -8,7 +8,7 @@
         padding: 20px;
         background: #FFFFFF;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px 0pxrgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -18,7 +18,7 @@
             justify-content: space-between;
             width: 290px;
             height: 79px;
-            margin-left: 20px;
+            margin-left: 40px;
             border-right: 1px solid #E0E0E0;
             padding-right: 10px;
             &:first-child {
@@ -36,6 +36,7 @@
                     background: url(../../assets/img/cash.svg) no-repeat;
                     background-position: center;
                     background-size: 100%;
+                    margin-left: 30px;
                 }
                 &.tfs {
                     width: 77.56px;

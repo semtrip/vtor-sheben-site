@@ -2,14 +2,12 @@
     @media (max-width: 780px) {
         & {
             padding-top: 300px;
+            background-position: 30% top;
         }
         .content {
             align-items: center;
             * {
                 text-align: center;
-            }
-            .offer {
-                color: #FFB320;
             }
         }
     }
@@ -30,7 +28,6 @@
             }
             .offer {
                 width: 100%;
-                color: #FFB320;
             }
         }
     }

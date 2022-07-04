@@ -100,9 +100,13 @@
         padding: 20px 0;
         span:last-child {
             cursor: pointer;
+            color: $textColor;
             &:hover {
                 color: $textHover;
             }
+        }
+        a {
+            text-decoration: none;
         }
     }
 }

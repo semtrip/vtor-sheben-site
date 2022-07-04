@@ -1,18 +1,22 @@
 import React from "react";
 
 import './main.scss'
+import './adaptive.scss'
 
-const Main = () => {
+import config from "../../config";
+
+const Main = (props) => {
+
     return (
         <React.Fragment>
             <div className="main">
                 <div className="container content">
-                    <span className="title">Вторичный бетонный щебень</span>
-                    <span className="descriptor">напрямую от производителя</span>
-                    <span className="offer">Мы поставляем качественный вторичный щебень разных фракций по низким ценам</span>
+                    <h1 className="title">{config.title}</h1>
+                    <h2 className="descriptor">{config.descriptor}</h2>
+                    <span className="offer">{config.offer}</span>
                     <div className="btns">
-                        <div className="btn">Расчитать стоимость</div>
-                        <div className="btn">Заказать звонок</div>
+                        <div className="btn" onClick={()=>{window.Marquiz.showModal('61115c5c12e050003e77c479')}}>Расчитать стоимость</div>
+                        <div className="btn" onClick={()=>{props.modal(true,{title: 'Обратная связь', description: 'Оставьте свой номер и мы Вам перезвоним', inputs: ['name', 'number']})}}>Заказать звонок</div>
                     </div>
                 </div>
             </div>

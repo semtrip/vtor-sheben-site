@@ -1,0 +1,12 @@
+.advantages {
+    @media (max-width: 1024px) {
+        * {
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 940px) {
+        & {
+            display: none;
+        }
+    }
+}

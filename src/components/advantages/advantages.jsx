@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './advantages.scss'
+import './adaptive.scss'
 
 const Advantages = () => {
     return ( 

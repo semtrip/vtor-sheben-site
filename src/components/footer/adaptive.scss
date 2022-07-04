@@ -1,0 +1,28 @@
+.footer {
+    @media (max-width: 780px) {
+        .content {
+            flex-direction: column;
+            height: 100%;
+            .contact {
+                flex-direction: column-reverse;
+                width: 100%;
+                .info {
+                    align-items: center;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
+
+.info {
+    @media (max-width: 780px) {
+        .content {
+            flex-direction: column;
+            height: 100%;
+            span {
+                margin: 10px 0;
+            }
+        }
+    }
+}

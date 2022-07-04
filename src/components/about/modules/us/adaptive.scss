@@ -1,0 +1,60 @@
+.aboutUs {
+    @media (max-width: 1250px) {
+        .content {
+            .line {
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 960px) {
+        .content {
+            .text {
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 90px;
+                .title {
+                    align-items: center;
+                    margin-bottom: 20px;
+                    span {
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
+                    }
+                    span::after {
+                        display: none;
+                    }
+                }
+                .description {
+                    width: 60%;
+                    text-align: center;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -24px;
+                        width: 100%;
+                        height: 4px;
+                    }
+                }
+            }
+        }
+        .slider {
+            padding-top: 40px;
+            margin-top: 0;
+        }
+    }
+    @media (max-width: 400px) {
+        .slider {
+            .btns {
+                flex-direction: column;
+                .btn {
+                    margin: 10px 0;
+                    width: 100%;
+                    &.active::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

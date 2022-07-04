@@ -1,5 +1,6 @@
 import React from "react";
 import './map.scss'
+import './adaptive.scss'
 
 
 function Map() {
@@ -15,7 +16,7 @@ function Map() {
                                 <p>Если же Вы хотите забрать вторичный щебень самовывозом, то ниже представлены карта Москвы и Московской области с расположением складов продукции.</p>
                             </div>
                         </div>
-                        <div id="map"></div>
+                        <div id="map" className="mapBlock"></div>
                     </div>
                 </div>
             </div>

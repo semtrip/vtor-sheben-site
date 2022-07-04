@@ -1,31 +1,49 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import { createBrowserHistory } from 'history';
+
+import {
+  withRouter
+} from "react-router-dom"
+
 
 import Header from "./components/header/header";
-import Main from "./components/main/main";
-import Advantages from "./components/advantages/advantages";
-import Products from "./components/products/products";
-import About from "./components/about/about";
-import Partners from "./components/about/modules/partners/partners";
-import BlockForm from "./components/forms/block-form";
-import Links from "./components/links/links";
 import Footer from "./components/footer/footer";
 
 import './assets/scss/global.scss'
+import Home from "./components/home";
+import Privacy from "./components/privacy/privacy";
+import FormModal from "./components/forms/modal";
 
-function App() {
-  return (
-    <>
-      <Header/>
-      <Main/>
-      <Advantages/>
-      <Products/>
-      <About/>
-      <Partners/>
-      <BlockForm/>
-      <Links/>
-      <Footer/>
-    </>
-  );
-}
+function App(props) {
+  const { history } = props
+  const [modalActive, setModalActive] = useState(false);
+  const [modalData, setModalData] = useState({})
 
-export default App;
+  function modal(active, data) {
+    setModalActive(active)
+    setModalData(data)
+  }
+
+  if(history.location.pathname === '/privacy') {
+    return (
+      <React.Fragment>
+        <Header/>
+          <Privacy/>        
+        <Footer/>  
+      </React.Fragment>
+    )
+  } else {
+    return (
+      <React.Fragment>
+        <Header/>
+          <Home modal={modal}/>
+          <FormModal active={modalActive} setActive={setModalActive} data={modalData}/>        
+        <Footer/>  
+      </React.Fragment>
+    );
+  }
+  }
+
+
+
+export default withRouter(App);

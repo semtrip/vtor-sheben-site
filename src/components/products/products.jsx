@@ -1,15 +1,18 @@
 import React from "react"
 import './products.scss'
+import './adaptive.scss'
 
 import productsArray from "./productsArray";
+import Marquiz from "../Marquiz";
 
 
 
-const Products = () => {
+const Products = (props) => {
     return (
         <React.Fragment>
             <div className="products">
                 <div className="container">
+                    <Marquiz/>
                     <div className="title">
                         <h2>Наша продукция</h2>
                         <span><i>*</i>Минимальный заказ <b>от 20 м³</b></span>
@@ -20,10 +23,10 @@ const Products = () => {
                             return(
                                 <div className="cart" key={i}>
                                     <img src={`img_products/id${i+1}.png`} alt={item.title}/>
-                                    <span className="title">{item.title}</span>
+                                    <span className="с-title">{item.title}</span>
                                     <span className="descriptor">{item.descriptor}</span>
                                     <span className="price">от {item.price}₽/м³</span>
-                                    <div className="btn">Расчет стоимости</div>
+                                    <div className="btn" onClick={()=>{props.modal(true, {title: 'Заказать', description: 'Минимальный заказ 20м³', inputs: ['product', 'volume', 'name', 'number', 'adress'], value: {product: item.title + " " + item.descriptor}})}}>Расчет стоимости</div>
                                 </div>
                             )
                         })

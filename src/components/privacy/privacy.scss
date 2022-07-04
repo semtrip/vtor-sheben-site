@@ -1,0 +1,35 @@
+.privacy {
+    padding-top: 180px;
+    padding-bottom: 90px;
+    color: #666666;
+    h1 {
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: 1px solid #66666654;
+    }
+    .title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    p {
+        margin: 0;
+        margin-bottom: 20px;
+        b {
+            font-weight: 400;
+            color: #ffb320;
+        }
+    }
+    ul {
+        li {
+            margin: 0;
+            margin-bottom: 10px;
+            b {
+                font-weight: 400;
+                color: #ffb320;
+            }
+            i {
+                color: #000000;
+            }
+        }
+    }
+}

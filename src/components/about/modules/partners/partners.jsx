@@ -1,5 +1,6 @@
 import React from "react";
 import './partners.scss'
+import './adaptive.scss'
 
 function Partners() {
     return (

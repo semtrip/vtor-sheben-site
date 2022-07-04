@@ -12,6 +12,7 @@
         justify-content: space-between;
         flex-direction: column;
         .title {
+            margin: 0;
             font-size: 36px;
             font-weight: 900;
             text-transform: none;
@@ -22,6 +23,7 @@
             width: 562px;
         }
         .descriptor {
+            margin: 0;
             font-size: 36px;
             font-weight: 400;
             text-transform: none;

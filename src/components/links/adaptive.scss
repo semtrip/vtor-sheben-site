@@ -1,0 +1,21 @@
+.links {
+    @media (max-width: 1250px) {
+        .content {
+            .items {
+                flex-wrap: wrap;
+                justify-content: center;
+                a {
+                    width: 300px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: 960px) {
+        .content {
+            .title {
+                text-align: center;
+            }
+        }
+    }
+}

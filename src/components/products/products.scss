@@ -1,10 +1,12 @@
 @import '../../assets/scss/const.scss';
 .products {
     background-color: transparent;
-    background-image: linear-gradient(180deg, #ffffff 0%, #FFB320 100%);
+    background-image: linear-gradient(180deg, #ffffff 30%, #FFB320 100%);
     width: 100%;
     padding-bottom: 48px;
+    padding-top: 90px;
     .title {
+        margin-top: 60px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -37,6 +39,9 @@
         }
     }
     .info {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
         font-size: 16px;
         font-weight: 600;
         color: $textColor;
@@ -52,12 +57,14 @@
             background: #FCFCFC;
             padding: 40px;
             margin: 8px 0;
+            height: 460px;
             border: 2px solid #E5E5E5;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-direction: column;
+            text-align: center;
             img {
                 margin-bottom: 20px;
                 transition: all .5s;
@@ -65,7 +72,7 @@
                     transform: scale(1.1);
                 }
             }
-            .title {
+            .с-title {
                 font-weight: 700;
                 font-size: 28px;
                 color: $textColor;

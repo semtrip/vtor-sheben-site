@@ -1,6 +1,6 @@
 import React from "react"
 import './benefit.scss'
-
+import './adaptive.scss'
 
 
 const Benefit = () => {

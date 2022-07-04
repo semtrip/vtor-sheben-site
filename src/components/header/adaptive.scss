@@ -1,0 +1,17 @@
+.header {
+    @media (max-width: 780px) {
+        .content {
+            flex-direction: column;
+            padding-top: 50px;
+            height: 100%;
+            .contact {
+                flex-direction: column-reverse;
+                width: 100%;
+                .info {
+                    align-items: center;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../../../assets/scss/const.scss';
+.benefit {
+    @media (max-width: 1600px) {
+        &::before {
+            display: none;
+        }
+    }
+    @media (max-width: 960px) {
+        .content {
+            .text {
+                flex-direction: column;
+                text-align: center;
+                .title {
+                    align-items: center;
+                }
+                .description {
+                    width: 60%;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -24px;
+                        width: 100%;
+                        height: 4px;
+                        background: $textHover;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 860px) {
+        .content {
+            .text {
+                .description {
+                    width: 80%;
+                }
+            }
+            .items {
+                .item {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}

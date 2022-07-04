@@ -1,0 +1,53 @@
+.formBlock {
+    @media (max-width: 1600px) {
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    @media (max-width: 960px) {
+        .content {
+            .text {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 40px;
+                .title {
+                    width: 100%;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    span::after {
+                        display: none;
+                    }
+                    * {
+                        text-align: center;
+                    }
+                }
+                .description {
+                    width: 50%;
+                    align-items: center;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -14px;
+                        width: 100%;
+                        height: 4px;
+                    }
+                    .number {
+                        margin-top: 10px;
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 700px) {
+        .content {
+            .inputs {
+                width: 100%;
+            }
+        }
+    }
+}

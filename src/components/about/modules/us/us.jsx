@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import './us.scss'
+import './adaptive.scss'
 
 
 function Us() {

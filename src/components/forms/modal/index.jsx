@@ -1,6 +1,18 @@
 import React, {useRef, useState, useEffect} from "react";
+import InputMask from 'react-input-mask';
+
 import config from "../../../config";
 import '../style.scss'
+
+function PhoneInput(props) {
+    return (
+      <InputMask 
+        mask='+7(999)999-99-99' 
+        value={props.value} 
+        onChange={props.onChange}>
+      </InputMask>
+    );
+}
 
 function FormModal(props) {
     const active = props.active
@@ -19,6 +31,8 @@ function FormModal(props) {
         3: useRef(null),
         4: useRef(null)
     }
+
+    const handleInput = ({ target: { value } }) => setNumber(value);
 
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
@@ -155,9 +169,13 @@ function FormModal(props) {
 
                                         case 'number': 
                                             return (
-                                                <div className={errorNumber ? 'input error': 'input'} onClick={()=>{handleClick(i)}} key={i}>
+                                                <div className={errorNumber ? 'input error': 'input'} key={i}>
                                                 <span>Телефон <b>*</b></span>
-                                                <input type="phone" ref={input[i]} value={number} onChange={event => {setNumber(event.target.value)}}/>
+                                                <PhoneInput 
+                                                    value={number} 
+                                                    onChange={handleInput}>
+                                                </PhoneInput>
+                                                {/* <input type="phone" ref={input[i]} value={number} onChange={event => {setNumber(event.target.value)}}/> */}
                                                 </div>
                                             )
                                         case 'product': 

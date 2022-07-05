@@ -1,7 +1,19 @@
 import React, {useRef, useState} from "react";
+import InputMask from 'react-input-mask';
+
 import config from "../../../config";
 import '../style.scss'
 import '../adaptive.scss'
+
+function PhoneInput(props) {
+    return (
+      <InputMask 
+        mask='+7(999)999-99-99' 
+        value={props.value} 
+        onChange={props.onChange}>
+      </InputMask>
+    );
+}
 
 function BlockForm() {
 
@@ -19,6 +31,7 @@ function BlockForm() {
 
     const [success, setSuccess] = useState(false)
 
+    const handleInput = ({ target: { value } }) => setNumber(value);
 
     const checkForm = () => {
 
@@ -131,9 +144,13 @@ function BlockForm() {
                                 <span>Имя <b>*</b></span>
                                 <input type="text" ref={input} value={name} onChange={event => {setName(event.target.value)}}/>
                             </div>
-                            <div className={errorNumber ? 'input error': 'input'}  onClick={()=>{handleClick(2)}}>
+                            <div className={errorNumber ? 'input error': 'input'}>
                                 <span>Телефон <b>*</b></span>
-                                <input type="phone" ref={input2} value={number} onChange={event => {setNumber(event.target.value)}}/>
+                                <PhoneInput 
+                                    value={number} 
+                                    onChange={handleInput}>
+                                </PhoneInput>
+                                {/* <input type="phone" ref={input2} value={maskingFunction(number)} onChange={event => {setNumber(event.target.value)}} placeholder={'+7'}/> */}
                             </div>
                             <div className="input area"  onClick={()=>{handleClick(3)}}>
                                 <span>Сообщение</span>

@@ -18,6 +18,15 @@ input {
     user-select: auto !important;
 }
 
+a {
+    -webkit-text-decoration: none !important;
+    -khtml-text-decoration: none !important;
+    -moz-text-decoration: none !important;
+    -ms-text-decoration: none !important;
+    -o-text-decoration: none !important;
+    text-decoration: none !important;
+}
+
 body {
     margin: 0;
     padding: 0;

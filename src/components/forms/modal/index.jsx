@@ -24,7 +24,8 @@ function FormModal(props) {
         if(props.data.value && props.data.value.product) {
             setProduct(data.value.product)
         }
-    });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const input = {
         0: useRef(null),
@@ -204,7 +205,7 @@ function FormModal(props) {
                                         default:
                                             break;
                                     }
-
+                                    return null
                                 })
                             }
                             <input type="checkbox" className="custom-checkbox" id="politics-modal" name="politics-modal" value="yes" defaultChecked onChange={()=>{setChekBox(!checkBox)}}/>

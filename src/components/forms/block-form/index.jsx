@@ -133,7 +133,7 @@ function BlockForm() {
                         </div>
                         <div className="description">
                             Или позвоните по номеру
-                            <a className="number" href="tel:+79262520390">+7 (926) 252 03 90</a>
+                            <a className="number" href={'tel:'+ config.phone}>{config.phone}</a>
                         </div>
                     </div>
                     <div className="inputs">

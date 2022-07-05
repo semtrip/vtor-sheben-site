@@ -150,7 +150,7 @@ function BlockForm() {
                                     value={number} 
                                     onChange={handleInput}>
                                 </PhoneInput>
-                                {/* <input type="phone" ref={input2} value={maskingFunction(number)} onChange={event => {setNumber(event.target.value)}} placeholder={'+7'}/> */}
+                                {/* <input type="phone" ref={input2} value={number} onChange={event => {setNumber(event.target.value)}} placeholder={'+7'}/> */}
                             </div>
                             <div className="input area"  onClick={()=>{handleClick(3)}}>
                                 <span>Сообщение</span>

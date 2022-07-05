@@ -78,11 +78,6 @@
                 z-index: 999999999;
                 display: flex;
                 align-items: center;
-                .content {
-                    .inputs {
-                        z-index: 999999999;
-                    }
-                }
             }
         }
         @media (max-height: 600px) {

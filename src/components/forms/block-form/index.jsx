@@ -11,7 +11,8 @@ function PhoneInput(props) {
         mask='+7(999)999-99-99' 
         value={props.value} 
         onChange={props.onChange}
-        type={'phone'}>
+        type={'phone'}
+        autocomplete={"off"}>
       </InputMask>
     );
 }
@@ -143,7 +144,7 @@ function BlockForm() {
                         <>
                             <div className={errorName ? 'input error': 'input'} onClick={()=>{handleClick(1)}}>
                                 <span>Имя <b>*</b></span>
-                                <input type="text" ref={input} value={name} onChange={event => {setName(event.target.value)}}/>
+                                <input type="text" autocomplete={"off"} ref={input} value={name} onChange={event => {setName(event.target.value)}}/>
                             </div>
                             <div className={errorNumber ? 'input error': 'input'}>
                                 <span>Телефон <b>*</b></span>
@@ -155,7 +156,7 @@ function BlockForm() {
                             </div>
                             <div className="input area"  onClick={()=>{handleClick(3)}}>
                                 <span>Сообщение</span>
-                                <textarea name="" id="" cols="30" rows="10" ref={input3} value={message} onChange={event => {setMessage(event.target.value)}}/>
+                                <textarea autocomplete={"off"} cols="30" rows="10" ref={input3} value={message} onChange={event => {setMessage(event.target.value)}}/>
                             </div>
                             <input type="checkbox" className="custom-checkbox" id="politics" name="politics" value="yes" defaultChecked onChange={()=>{setChekBox(!checkBox)}}/>
                             <label htmlFor="politics">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных *</label>

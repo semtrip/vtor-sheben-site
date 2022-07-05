@@ -15,6 +15,7 @@
                 .title {
                     align-items: center;
                     margin-bottom: 20px;
+                    width: 100%;
                     span {
                         width: 100%;
                         text-align: center;
@@ -41,6 +42,22 @@
         .slider {
             padding-top: 40px;
             margin-top: 0;
+            .pages {
+                padding: 40px 10px;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        .content {
+            .text {
+                .description {
+                    width: 90%;
+                }
+            }
+        }
+        .slider {
+            padding-top: 40px;
+            margin-top: 0;
         }
     }
     @media (max-width: 400px) {
@@ -53,6 +70,11 @@
                     &.active::after {
                         display: none;
                     }
+                }
+            }
+            .pages {
+                .numberText {
+                    padding-left: 10px;
                 }
             }
         }

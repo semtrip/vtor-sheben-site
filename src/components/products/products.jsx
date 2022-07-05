@@ -4,7 +4,7 @@ import './adaptive.scss'
 
 import productsArray from "./productsArray";
 import Marquiz from "../Marquiz";
-
+import MarquizWifget from "../MarquizWidget";
 
 
 const Products = (props) => {
@@ -12,7 +12,9 @@ const Products = (props) => {
         <React.Fragment>
             <div className="products">
                 <div className="container">
-                    <Marquiz/>
+                    <div className="quiz" id="quiz_block">
+                        <Marquiz/>
+                    </div>
                     <div className="title">
                         <h2>Наша продукция</h2>
                         <span><i>*</i>Минимальный заказ <b>от 20 м³</b></span>

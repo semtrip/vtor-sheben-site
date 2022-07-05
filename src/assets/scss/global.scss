@@ -23,6 +23,11 @@ body {
     margin: 0 auto;
 }
 
+.marquiz-widget {
+    z-index: 99;
+    position: absolute;
+}
+
 @media (max-width: 1250px) {
     .container {
         width: 100%;

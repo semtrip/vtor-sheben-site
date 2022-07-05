@@ -34,4 +34,13 @@
             }
         }
     }
+    @media (max-width: 480px) {
+        .content {
+            .text {
+                .description {
+                    width: 90%;
+                }
+            }
+        }
+    }
 }

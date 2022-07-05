@@ -7,7 +7,6 @@ import About from "./about/about";
 import Partners from "./about/modules/partners/partners";
 import BlockForm from "./forms/block-form";
 import Links from "./links/links";
-import MarquizWifget from "./MarquizWidget";
 
 function Home(props) {
     useEffect(() => {
@@ -22,7 +21,6 @@ function Home(props) {
             <Partners/>
             <BlockForm/>
             <Links/>
-            <MarquizWifget/>
         </>
     );
 }

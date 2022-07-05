@@ -23,26 +23,24 @@ function App(props) {
     setModalActive(active)
     setModalData(data)
   }
-
-  if(history.location.pathname === '/privacy') {
-    return (
+  return (
+    
       <React.Fragment>
         <Header/>
-          <Privacy/>        
-        <Footer/>  
+        {
+          history.location.pathname === '/privacy' ?
+            <Privacy/>
+            :
+            <>
+              <Home modal={modal}/>
+              <FormModal active={modalActive} setActive={setModalActive} data={modalData}/>  
+            </>
+        }
+        <Footer/> 
       </React.Fragment>
-    )
-  } else {
-    return (
-      <React.Fragment>
-        <Header/>
-          <Home modal={modal}/>
-          <FormModal active={modalActive} setActive={setModalActive} data={modalData}/>        
-        <Footer/>  
-      </React.Fragment>
-    );
-  }
-  }
+    
+  )
+}
 
 
 

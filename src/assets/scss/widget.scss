@@ -1,0 +1,16 @@
+.widget {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: flex;
+    align-items: flex-end;
+    width: 400px;
+    height: 500px;
+    z-index: 999999;
+    margin-bottom: -440px;
+    .app.app_widget-open {
+        & {
+            margin-bottom: 0;
+        }
+    }
+}

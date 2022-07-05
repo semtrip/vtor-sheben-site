@@ -11,7 +11,7 @@ function PhoneInput(props) {
         value={props.value} 
         onChange={props.onChange}
         type={'phone'}
-        autocomplete={"off"}>
+        autoComplete="new-password">
       </InputMask>
     );
 }
@@ -165,7 +165,7 @@ function FormModal(props) {
                                             return (
                                                 <div className={errorName ? 'input error': 'input'} onClick={()=>{handleClick(i)}} key={i}>
                                                 <span>Имя <b>*</b></span>
-                                                <input type="text" autocomplete={"off"} ref={input[i]} value={name} onChange={event => {setName(event.target.value)}}/>
+                                                <input type="text" autoComplete="new-password" ref={input[i]} value={name} onChange={event => {setName(event.target.value)}}/>
                                                 </div>
                                             )
 
@@ -177,28 +177,28 @@ function FormModal(props) {
                                                     value={number} 
                                                     onChange={handleInput}>
                                                 </PhoneInput>
-                                                {/* <input type="phone" autocomplete={"off"} ref={input[i]} value={number} onChange={event => {setNumber(event.target.value)}}/> */}
+                                                {/* <input type="phone" autoComplete="new-password" ref={input[i]} value={number} onChange={event => {setNumber(event.target.value)}}/> */}
                                                 </div>
                                             )
                                         case 'product': 
                                             return (
                                                     <div className={errorProduct ? 'input error': 'input'} onClick={()=>{handleClick(i)}} key={i}>
                                                     <span>Название <b>*</b></span>
-                                                    <input type="text" autocomplete={"off"} ref={input[i]} value={product} onChange={event => {setProduct(event.target.value)}}/>
+                                                    <input type="text" autoComplete="new-password" ref={input[i]} value={product} onChange={event => {setProduct(event.target.value)}}/>
                                                     </div>
                                                 )
                                         case 'volume': 
                                             return (
                                                     <div className="input" onClick={()=>{handleClick(i)}} key={i}>
                                                     <span>Объем</span>
-                                                    <input type="number" autocomplete={"off"} ref={input[i]} value={volume} onChange={event => {setVolume(event.target.value)}}/>
+                                                    <input type="number" autoComplete="new-password" ref={input[i]} value={volume} onChange={event => {setVolume(event.target.value)}}/>
                                                     </div>
                                                 )
                                         case 'adress': 
                                             return (
                                                     <div className="input" onClick={()=>{handleClick(i)}} key={i}>
                                                     <span>Адрес</span>
-                                                    <input type="text" autocomplete={"off"} ref={input[i]} value={address} onChange={event => {setAddress(event.target.value)}}/>
+                                                    <input type="text" autoComplete="new-password" ref={input[i]} value={address} onChange={event => {setAddress(event.target.value)}}/>
                                                     </div>
                                                 )
                                         default:

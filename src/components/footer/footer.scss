@@ -73,6 +73,10 @@
                     &:hover {
                         color: #ffffff;
                     }
+                    &:visited {
+                        text-decoration: none;
+                        color: $textColor;
+                    }
                 }
                 .email {
                     text-decoration: none;
@@ -84,6 +88,10 @@
                     -webkit-user-select: all;
                     &:hover {
                         color: #ffffff;
+                    }
+                    &:visited {
+                        text-decoration: none;
+                        color: $textColor;
                     }
                 }
             }

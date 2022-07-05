@@ -166,6 +166,10 @@
                     &:hover {
                         color: $textHover;
                     }
+                    &:visited {
+                        text-decoration: none;
+                        color: $textColor;
+                    }
                 }
             }
         }
